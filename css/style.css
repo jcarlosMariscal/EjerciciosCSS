@@ -55,6 +55,13 @@ nav .mobile .header .more button {
 nav .logo {
   min-width: 250px;
 }
+.desktop .logo img {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 nav a {
   color: white;
   text-decoration: none;
@@ -154,13 +161,15 @@ nav .desktop .secondary.mini {
 .cards .card .header .title {
   font-size: 28px;
 }
-.cards .card .footer .autor {
+.cards .card .footer .autor a {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 .cards .card .footer img {
-  width: 48px;
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
   border-radius: 50%;
 }
 .cards .card[class*="element"] {
