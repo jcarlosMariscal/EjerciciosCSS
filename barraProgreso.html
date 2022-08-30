@@ -9,7 +9,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <title>Menú vertical responsivo</title>
+    <title>Barra de Progreso</title>
   </head>
   <body>
     <nav>
@@ -56,12 +56,27 @@
         </div>
       </div>
     </nav>
-    <script>
-      const bMore = document.querySelector("#bMore");
-      const links = document.querySelector("#links");
-      bMore.addEventListener("click", (e) => {
-        links.classList.toggle("collapsed");
-      });
-    </script>
+    <main class="mainProgress">
+      <div class="progressbar-container">
+        <div class="outer-box">
+          <div class="inner-box">50%</div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            width="200"
+            height="200"
+          >
+            <defs>
+              <linearGradient id="gradientColor">
+                <stop offset="0%" stop-color="#e91e63" />
+                <stop offset="100%" stop-color="#673ab7" />
+              </linearGradient>
+            </defs>
+            <circle cx="100" cy="100" r="80" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+    </main>
+    <script></script>
   </body>
 </html>
