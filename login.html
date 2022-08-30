@@ -9,10 +9,10 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <title>Menú vertical responsivo</title>
+    <title>Login</title>
   </head>
   <body>
-    <nav>
+    <!-- <nav>
       <div class="mobile">
         <div class="header">
           <div class="logo"><img src="img/logo.jpg" alt="" /></div>
@@ -54,13 +54,50 @@
           </div>
         </div>
       </div>
-    </nav>
-    <script>
-      const bMore = document.querySelector("#bMore");
-      const links = document.querySelector("#links");
-      bMore.addEventListener("click", (e) => {
-        links.classList.toggle("collapsed");
-      });
-    </script>
+    </nav> -->
+    <main class="main">
+      <div class="form-container">
+        <div class="login-container">
+          <h2>Welcome</h2>
+          <p>Selecciona un método de autenticación</p>
+          <form action="">
+            <p>
+              <label for="username">Username</label>
+              <input class="input" type="text" name="username" id="username" />
+            </p>
+            <p>
+              <label for="password">Password</label>
+              <input
+                class="input"
+                type="password"
+                name="password"
+                id="password"
+              />
+            </p>
+            <div class="options">
+              <div>
+                Remember me
+                <input type="checkbox" name="rememberme" id="rememberme" />
+              </div>
+              <div>
+                <a href="#">I forgot my password</a>
+              </div>
+            </div>
+
+            <p>
+              <input type="submit" value="Log in" class="btn btn-login" />
+            </p>
+            <div class="providers">
+              <span>Choose another method to authenticate</span>
+              <button class="btn btn-google">Google</button>
+              <button class="btn btn-facebook">Facebook</button>
+              <button class="btn btn-twitter">Twitter</button>
+            </div>
+          </form>
+        </div>
+        <div class="welcome-screen-container"></div>
+      </div>
+    </main>
+    <script></script>
   </body>
 </html>
