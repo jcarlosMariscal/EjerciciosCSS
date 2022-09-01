@@ -1,3 +1,7 @@
+:root {
+  --border-color: #558bff;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -748,4 +752,90 @@ thead {
   background-color: dodgerblue;
   color: white;
   transform: rotateY(180deg);
+}
+
+/* ---------------- SISTEMA DE COMENTARIOS --------------------- */
+.comment-container {
+  background-color: rgb(30, 30, 52);
+  width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.comment-container > .comment {
+  margin-bottom: 10px;
+}
+.comment {
+  display: flex;
+  width: 100%;
+  color: white;
+}
+.comment .line {
+  position: relative;
+  width: 10px;
+  height: 50%;
+  border-left: solid 1px var(--border-color);
+  border-bottom: solid 1px var(--border-color);
+  border-radius: 0 0 0 8px; /*arriba|derecha|abajo|izquiera*/
+}
+.comment-container .comment .comment-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.comment .comment-wrapper .content {
+  width: calc(100% - 25px);
+  display: flex;
+  border: solid 1px var(--border-color);
+  padding: 10px;
+  border-radius: 3px;
+  background-color: rgb(24, 43, 80);
+}
+.comment .comment-wrapper .content img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding-right: 10px;
+}
+.comment .comment-wrapper .content .comment-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.comment .comment-wrapper .content .comment-info .header .username {
+  font-weight: bold;
+}
+.comment .comment-wrapper .content .comment-info .header .date {
+  color: #999;
+}
+.comment .comment-wrapper .content .comment-info .actions {
+  display: flex;
+  gap: 5px;
+}
+.comment .comment-wrapper .content .comment-info .actions button {
+  border: none;
+  background-color: transparent;
+  color: var(--border-color);
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 3px;
+}
+.comment .comment-wrapper .content .comment-info .actions button:hover {
+  color: white;
+  background-color: var(--border-color);
+}
+.comment-container .comment .replies {
+  padding-top: 10px;
+  position: relative;
+  padding-left: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.comment-container .comment .replies::before {
+  content: "";
+  position: absolute;
+  background-color: var(--border-color);
+  width: 1px;
+  top: 0;
+  height: calc(100% - 53px);
 }
