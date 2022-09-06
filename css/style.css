@@ -901,3 +901,6 @@ thead {
   left: calc(50% - 10px);
   bottom: -20px;
 }
+
+/* ---------------- MENU VERTICAL --------------------- */
+/* Por motivos de que los estilos anteriores modifican el diseño, se pasó el código a un archivo independiente: [menu_vertical.css] */
